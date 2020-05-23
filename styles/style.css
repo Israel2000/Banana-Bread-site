@@ -1,115 +1,148 @@
-
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
     font-size: 35px;
-    color: #2A1004;
     font-family: 'Baloo Paaji 2', cursive;
-}
-img {
-    margin-right: 160px;
-}
- /* a:hover .nav-link {
-     color: red;
- } */
-li {
-    margin: 10px;
+}        
+
+body, html {
+    overflow-x: hidden;
 }
 
+/* nav css */
+
+ 
 /* order now 20% */
 .order-now {
-    border: 2px solid #2A1004;
-    border-radius: 5px;
-  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-}
-/* body section */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  background-color: #ffc104;
-  text-align: left;
-  color: #2A0F04;
-  /* font-weight: bold;
-   */
-   margin: 150px;
-}
-
-.container {
-    position: relative;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+    background-color: #ffc104;
+    width: 146px;
     text-align: center;
-    color: white;
+}
+.order-now:hover {
+  background-color: #2A1004 !important;
+}
+a:hover, .order-now:hover {
+    color: #ffc104 !important;
 }
 
-.note {
-    padding: 5px;
-/* default fallback */
-    background: rgb(255, 255, 255) transparent;
-/* nice browsers */
-    background: rgba(255, 255, 255, 0.8);
-
-/* IE8 */    
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF)";
-}
-/* form css */
-.bg-warning {
-  margin: 30px;
-  background-color: #FFF079;
+/* body section */
+/* submition forms starts */
+.px-4 {
+      margin: 20px 0px 20px 100px;
+      border: 2px solid #2A1004;
+      border-radius: 10px;
 }
 
-form {
-  padding: 20px;
-}
-::placeholder {
+  label {
+    color: #2A1004;
+    font-size: 1.4em;
+  }
+  h1 {
+    color: #2A1004;
+  }
+
+  #fullNameInput {
+    border: 2px solid #2A1004;
+  }
+  #addressInput {
+    border: 2px solid #2A1004;
+  }
+  #textareaInput {
+    border: 2px solid #2A1004;
+  }
+  input::placeholder {
   color: #2A1004;
   font-size: 1.1em;
-	text-align: center;
 }
-
-input[type=text], textarea, .form-control{
-    border-radius: 15px;
+.btn-primary {
+  background-color: #2A1004 !important;
+  width: 200px;
+  height: 50px;
+  border-color: #2A1004 !important;
 }
-button {
-	width: 150px;
+.btn:hover, .btn-primary:hover {
+  color: #2A1004 !important;
+  border: 2px solid #2A1004 !important;
+  border-color: none !important;
+  background-color: #ffc104 !important;
 }
 /* end of form css */
+/* ourCommitments paragraph*/
+.ourCommitments {
+  background-color: #ffc104;
+  width: 100%;
+  padding: 20px;
+    text-align: center;
+
+}
+.ourCommitments > h1 {
+  text-align: center;
+}
 .fa {
   padding: 20px;
   font-size: 30px;
   width: 60px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  margin: 20px 2px;
   border-radius: 50%;
 }
 
 .fa:hover {
-    opacity: 0.7;
+    opacity: 0.5;
+    color: #ffc104;
+   
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+  background: #2A1004;
+  color: #ffc104;
 }
 
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+  background: #2A1004;
+  color: #ffc104;
 }
 
 .fa-google {
-  background: #dd4b39;
-  color: white;
+  background: #2A1004;
+  color: #ffc104;
 }
+
+/* footer css */
 footer {
     background-color: #ffc104;
-    height: 310px;
+    height: 400px;
     color: #2A1004;
-    padding: 40px 40px;
+    padding: 60px 140px;
     width: 100%;
+    text-align: center;
+}
+/* email sending */
+.emailsend {
+  margin: 40px 0px;
+}
+
+.emailForm > input {
+  width: 250px;
+  height: 52px;
+  border: 1px solid #2A1004;
+  border-radius: 5px;
+}
+.emailForm > button {
+    width: 100px;
+    height: 50px;
+    background-color: #2A1004;
+    color: #ffc104;
+    border-color: none;
+    margin-left: 14px !important;
+}
+
+.emailForm > input::placeholder {
+  padding-left: 5px;
 }

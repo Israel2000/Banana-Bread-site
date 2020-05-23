@@ -5,130 +5,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <!-- font-awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
     <title>Banana-bread</title>
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
-            <!-- <a class="navbar-brand" href="#">Navbar 4</a> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-center" id="navbarsExample11">
-                <a class="nav-link ml-3" href="#"><img src="assests/bananaBread-logo2.png" width="200" /></a>
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link lead" style="color: #2A1004" href="#">Home</a>
-                    </li>
-                    <li class="nav-item lead">
-                        <a class="nav-link" style="color: #2A1004" href="#">Orders</a>
-                    </li>
-                    <li class="nav-item lead">
-                        <a class="nav-link" style="color: #2A1004" href="#">Locals</a>
-                    </li>
-                    <li class="nav-item lead">
-                        <a class="nav-link" style="color: #2A1004" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item lead ml-3">
-                    </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand float-left " href="#"><img src="assests/bananaBread-logo2.png" width="200" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item lead active">
+                    <a class="nav-link" style="color: #2A1004" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link lead" style="color: #2A1004" href="#">Orders</a>
+                </li>
+                <li class="nav-item lead">
+                    <a class="nav-link" style="color: #2A1004" href="#">About</a>
+                </li>
+                <li class="nav-item lead">
+                    <a class="nav-link" style="color: #2A1004" href="#">Contact</a>
+                </li>
+            </ul>
+            <!-- <span class="navbar-text order-now">
+                Order Now
+                20%Off
+            </span> -->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <table>
+                    <tr>
+                        <td><input type="hidden" name="on0" value="Banana Bread Choice">Banana Bread Choice</td>
+                    </tr>
+                    <tr>
+                        <td><select name="os0">
+                                <option value="Bundt Pan">Bundt Pan $22.99 USD</option>
+                                <option value="Loaf Pan">Loaf Pan $10.99 USD</option>
+                                <option value="Muffin Pan">Muffin Pan $18.99 USD</option>
+                            </select> </td>
+                    </tr>
+                </table>
+                <input type="hidden" name="encrypted"
+                    value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0"
+                    name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
 
-                </ul>
-                <a class="nav-link order-now" style="color: #2A1004;" href="#">ORDER NOW: 20% OFF</a>
-
-            </div>
         </div>
     </nav>
 
+    <div class="container">
+        <img class="card-img-top" src="assests/final-bana-bread-image.png" width="700" alt="bananaBread-pic" />
+    </div>
+
+    <!-- form section -->
 
     <div class="container">
-        <img class="card-img-top" src="assests/bananaBread-pic.jpg" width="700" alt="bananaBread-pic" />
 
-        <div class="top-left">
-            <h1>Order Now!</h1>
-
-            <div class="bg-warning" style="border-radius: 15px">
-                <form action="POST" data-netlify="true" name="contact">
-                    <div class="form-group">
-                        <input type="text" class="form-control formChange" id="InputName1" name="name"
-                            placeholder="Enter name:" aria-describedby="name">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control" id="InputAddress1"
-                            placeholder="Enter address:" aria-describedby="address">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" class="form-control formChange" id="FormControlTextarea1" rows="3"
-                            placeholder="leave note:" style="border-radius: 15px"></textarea>
-                        <small class="form-text" style="color: #2A1004">* Any
-                            special notes for preparing
-                            your
-                            order.
-                        </small>
-                    </div>
-                    <div class="form-check mb-2 mr-sm-5">
-                        <label style="color: #2A1004">No.:</label>
-                        <select id="cars" name="cars">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary"
-                                style="background-color: #2A1004; border: none; border-radius: 35px">Submit</button>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-
-
+        <div class="col-sm-8">
+            <h1>You can order Now!</h1>
+            <form class="px-4 py-3">
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="email" class="form-control" id="fullNameInput" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="addressoftheperson">Address:</label>
+                    <input type="password" class="form-control" id="addressInput" placeholder="Enter address">
+                </div>
+                <div class="form-group">
+                    <label for="leavenote">Message:</label>
+                    <textarea class="form-control" id="textareaInput" rows="3"
+                        placeholder="Please leave little note and phone # for contact"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
         </div>
-        <div class="top-right">
-            <h1 class="note">DELICIOUS <br>MADE <br>HAPPINESS!</h1>
-        </div>
-        <footer>
-            <h1>#OUR COMMITMENTS!</h1>
+    </div>
+    <div class="ourCommitments">
+        <hr>
+        <h1>#OUR COMMITMENTS!</h1>
+        <blockquote class="blockquote">
             <p class="lead">For Denver, Aurora and surrounding areas only!
                 We deliver to any cities of state of Colorado. Delivery would be make 24 hours after the order
                 in place. We do
                 our best all to serve all Colordoians soon as possible. Hope you understand and thanks for choosing
                 “simple
                 banana-bread”.</p>
-            <hr>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-google"></a><br>
-            @2020 Simple Banana-bread
-            Home | Gallery | Orders
-        </footer>
+        </blockquote>
+        <hr>
+    </div>
+    <footer>
+        <div>
+            <a href="#" class="fa fa-facebook" style="font-size:20px"></a>
+            <a href="#" class="fa fa-twitter" style="font-size:20px"></a>
+            <a href="#" class="fa fa-google" style="font-size:20px"></a><br>
+        </div>
 
+        <div class="emailsend">
+            <h5>Follow us for great deals!</h5>
+            <form class="emailForm">
 
+                <input type="email" placeholder="Enter email" id="email">
 
+                <button type="submit" class="btn">Submit</button>
 
+            </form>
+        </div>
+        @2020 Simple Banana-bread Home | Gallery | Orders
+    </footer>
 
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
 </body>
 
 </html>
