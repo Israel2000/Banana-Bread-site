@@ -17,10 +17,10 @@ body, html {
  
 /* order now 20% */
 .order-now {
-    border-radius: 25px;
+    border-radius: 5px;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
     background-color: #ffc104;
-    width: 146px;
+    width: 186px;
     text-align: center;
 }
 .order-now:hover {
@@ -33,27 +33,28 @@ a:hover, .order-now:hover {
 /* body section */
 /* submition forms starts */
 .px-4 {
-      /* margin: 20px 0px 20px 100px; */
-      border: 2px solid #2A1004;
-      border-radius: 10px;
+      margin-left: 350px; 
+      border: 2px solid #965626;
+      border-radius: 5px;
 }
 
   label {
     color: #2A1004;
     font-size: 1.4em;
+    display: flex;
   }
   h1 {
     color: #2A1004;
   }
 
   #fullNameInput {
-    border: 2px solid #2A1004;
+    border: 2px solid #a1a09f;
   }
   #addressInput {
-    border: 2px solid #2A1004;
+    border: 2px solid #a1a09f;
   }
   #textareaInput {
-    border: 2px solid #2A1004;
+    border: 2px solid #a1a09f;
   }
   input::placeholder {
   color: #2A1004;
@@ -74,7 +75,7 @@ a:hover, .order-now:hover {
 .m-5 {
   padding-top: 4rem !important;
 }
-/* end of form css */
+/* end of form cxs */
 
 /* ourCommitments paragraph*/
 .ourCommitments {
@@ -120,7 +121,7 @@ a:hover, .order-now:hover {
 /* footer css */
 footer {
     background-color: #ffc104;
-    height: 400px;
+    height: 850px;
     color: #2A1004;
     padding: 60px 140px;
     width: 100%;
