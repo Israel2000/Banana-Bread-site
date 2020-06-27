@@ -44,7 +44,6 @@
                 ORDER NOW
                 20%OFF
             </span>
-
         </div>
     </nav>
 
@@ -58,23 +57,7 @@
         <div class="row">
             <div class="col-sm-8">
                 <h1>You can order Now!</h1>
-                <small style="color: #2A1004">Step. 1 Please fill your information for our database.</small>
-                <!-- <form class="px-4 py-3">
-                    <div class="form-group">
-                        <label for="fullname">Full Name:</label>
-                        <input type="email" class="form-control" id="fullNameInput" placeholder="Enter Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="addressoftheperson">Address:</label>
-                        <input type="password" class="form-control" id="addressInput" placeholder="Enter address">
-                    </div>
-                    <div class="form-group">
-                        <label for="leavenote">Message:</label>
-                        <textarea class="form-control" id="textareaInput" rows="3"
-                            placeholder="Please leave little note and phone # for contact"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form> -->
+                <!-- <small style="color: #2A1004">Step. 1 Please fill your information for our database.</small> -->
             </div>
             <div class="col-sm-4 mt-5">
                 <small style="color: #2A1004">Step. 2 Please fill this for payments</small>
@@ -120,19 +103,20 @@
 
         <form class="py-3">
             <div class="form-group">
-                <label for="fullname">Full Name:</label>
-                <input type="email" class="form-control" id="fullNameInput" placeholder="Enter Name">
+                <!-- <label for="fullname">Full Name:</label> -->
+                <input type="text" class="form-control" id="subject" placeholder="Subject">
             </div>
             <div class="form-group">
-                <label for="addressoftheperson">Address:</label>
-                <input type="password" class="form-control" id="addressInput" placeholder="Enter address">
+                <!-- <label for="addressoftheperson">Address:</label> -->
+                <input type="email" class="form-control" id="Email"
+                    placeholder="Enter address 'example bananabread@gmail.com'">
             </div>
             <div class="form-group">
-                <label for="leavenote">Message:</label>
-                <textarea class="form-control" id="textareaInput" rows="3"
+                <!-- <label for="leavenote">Message:</label> -->
+                <textarea class="form-control" id="text" cols="30" rows="4"
                     placeholder="Please leave little note and phone # for contact"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" value="Submit" class="btn btn-primary">
         </form>
 
         <div>
@@ -165,6 +149,25 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
+    <script>
+        $('form').on('submit', (e) => {
+            e.preventDefault();
+
+            const email = $('#email').val().trim();
+            const subject = $('#subject').val().trim();
+            const text = $('#text').val().trim();
+
+            const data = {
+                email,
+                subject,
+                text
+            };
+
+            $.post('./email', data, function () {
+                console.log('Server received our data');
+            });
+        });
+    </script>
 </body>
 
 </html>

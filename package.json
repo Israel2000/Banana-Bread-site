@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Israel2000/Banana-Bread-site#readme",
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.10",
+    "nodemailer-mailgun-transport": "^2.0.0"
   }
 }
