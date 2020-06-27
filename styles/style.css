@@ -32,16 +32,12 @@ a:hover, .order-now:hover {
 
 /* body section */
 /* submition forms starts */
-.px-4 {
-      margin-left: 350px; 
-      border: 2px solid #965626;
-      border-radius: 5px;
-}
+
 
   label {
     color: #2A1004;
     font-size: 1.4em;
-    display: flex;
+    text-align: left;
   }
   h1 {
     color: #2A1004;
@@ -75,7 +71,7 @@ a:hover, .order-now:hover {
 .m-5 {
   padding-top: 4rem !important;
 }
-/* end of form cxs */
+/* end of form css */
 
 /* ourCommitments paragraph*/
 .ourCommitments {
@@ -126,6 +122,7 @@ footer {
     padding: 60px 140px;
     width: 100%;
     text-align: center;
+    margin-top: -10px; /* to close the gap on top*/
 }
 /* email sending */
 .emailsend {

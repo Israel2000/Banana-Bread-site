@@ -4,25 +4,31 @@
 
 @media (max-width: 425px) {
     /* nav */
-   
     /* body section */
    h1 {
         font-size: 1.5rem;
-    }
-    .px-4 {
-        margin-left: 10px;
     }
     blockquote, p {
         font-size: 1rem !important;
         text-align: none !important;
     }
+    /* complete form for 425 forced to aligned input */
+    .form-control {
+        width: 300px;
+        margin-left: -70px !important;
+
+    }
+    .btn-primary {
+        margin-left: -20px !important;
+    }
+    
     .fa, .fa-facebook, .fa-twitter, .fa-google {
         font-size: 12px !important;
           padding: 10px;
             width: 30px;
     }
     footer {
-        height: 510px !important;
+        height: 1010px !important;
     }
     .emailForm > input {
         margin-left: -48px !important;
@@ -34,13 +40,21 @@
 
 @media (max-width: 768px) {
     /* nav  */
- 
+
    
     /* footer */
    footer {
-        height: 400px;
+        height: 800px;
     }
-    
+}
+
+@media (max-width: 1024px) {
+   
+    .px-4 {
+      margin-left: 50px; 
+      border: 2px solid #965626;
+      border-radius: 5px;
+}
 }
 
 

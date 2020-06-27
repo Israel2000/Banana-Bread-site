@@ -21,9 +21,9 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand float-left " href="#"><img src="assests/bananaBread-logo2.png" width="200" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" style="color: #2A1004" type="button" data-toggle="collapse"
+            data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: #2A1004"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
@@ -41,35 +41,15 @@
                 </li>
             </ul>
             <span class="navbar-text order-now">
-                Order Now
-                20%Off
+                ORDER NOW
+                20%OFF
             </span>
-            <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <table>
-                    <tr>
-                        <td><input type="hidden" name="on0" value="Banana Bread Choice">Banana Bread Choice</td>
-                    </tr>
-                    <tr>
-                        <td><select name="os0">
-                                <option value="Bundt Pan">Bundt Pan $22.99 USD</option>
-                                <option value="Loaf Pan">Loaf Pan $10.99 USD</option>
-                                <option value="Muffin Pan">Muffin Pan $18.99 USD</option>
-                            </select> </td>
-                    </tr>
-                </table>
-                <input type="hidden" name="encrypted"
-                    value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0"
-                    name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form> -->
 
         </div>
     </nav>
 
     <div class="">
-        <img class="card-img-top" src="assests/final-bana-bread-image.png" height="800" alt="bananaBread-pic" />
+        <img class="card-img-top" src="assests/final-bana-bread-image.png" alt="bananaBread-pic" />
     </div>
 
     <!-- form section -->
@@ -125,7 +105,6 @@
     <!--forms ended-->
 
     <div class="ourCommitments">
-        <hr>
         <h1>#OUR COMMITMENTS!</h1>
         <blockquote class="blockquote">
             <p class="lead">For Denver, Aurora and surrounding areas only!
@@ -138,25 +117,24 @@
         <hr>
     </div>
     <footer>
-        <div class="col-sm-8">
 
-            <form class="px-4 py-3">
-                <div class="form-group">
-                    <label for="fullname">Full Name:</label>
-                    <input type="email" class="form-control" id="fullNameInput" placeholder="Enter Name">
-                </div>
-                <div class="form-group">
-                    <label for="addressoftheperson">Address:</label>
-                    <input type="password" class="form-control" id="addressInput" placeholder="Enter address">
-                </div>
-                <div class="form-group">
-                    <label for="leavenote">Message:</label>
-                    <textarea class="form-control" id="textareaInput" rows="3"
-                        placeholder="Please leave little note and phone # for contact"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+        <form class="py-3">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="email" class="form-control" id="fullNameInput" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="addressoftheperson">Address:</label>
+                <input type="password" class="form-control" id="addressInput" placeholder="Enter address">
+            </div>
+            <div class="form-group">
+                <label for="leavenote">Message:</label>
+                <textarea class="form-control" id="textareaInput" rows="3"
+                    placeholder="Please leave little note and phone # for contact"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
         <div>
             <a href="#" class="fa fa-facebook" style="font-size:20px"></a>
             <a href="#" class="fa fa-twitter" style="font-size:20px"></a>
